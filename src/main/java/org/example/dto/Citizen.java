@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class Citizen {
+    private String fileName;
     private String nic;
     private String age;
     private String birthday;

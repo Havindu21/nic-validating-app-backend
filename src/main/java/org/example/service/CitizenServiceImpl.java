@@ -55,6 +55,7 @@ public class CitizenServiceImpl implements CitizenService {
             return csvToBean.parse()
                     .stream()
                     .map(csvLine -> CitizenEntity.builder()
+                            .fileName(file.getOriginalFilename())
                             .nic(csvLine.getNic())
                             .birthday(validateNIC(csvLine.getNic()))
                             .age(age)

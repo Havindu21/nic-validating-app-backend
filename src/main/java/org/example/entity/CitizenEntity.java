@@ -16,6 +16,7 @@ public class CitizenEntity {
     @Id
     @GeneratedValue
     private Long id;
+    private String fileName;
     private String nic;
     private String age;
     private String birthday;
