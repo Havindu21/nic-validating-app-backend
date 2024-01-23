@@ -1,9 +1,14 @@
 package org.example.service;
 
+import org.example.entity.CitizenEntity;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.Set;
 
 public interface CitizenService {
-    int validateNICsAndSave(List<MultipartFile> files);
+    Set<CitizenEntity> validateNICsAndSave(List<MultipartFile> files);
+    List<CitizenEntity> getValidatedNICsByFileName(String fileName);
+
+    List<CitizenEntity> getAllValidatedNICs();
 }
