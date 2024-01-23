@@ -31,3 +31,25 @@ c
 citizens3.csv,8\4\842f18dc249754ec0082cfec572b7df9a0ba8e12
 =
 citizens4.csv,7\5\750e669d8210b692e6f4dee546669c0e03ff5cc0
+c
+3src/main/java/org/example/dto/DashboardSummary.java,9\f\9fb9d5bce8daceae64abe04ed9c4203c79a129c8
+c
+3src/main/java/org/example/dto/DashboardDetails.java,5\2\52b0b84ed637902cb20fad20d99127a65a03ac77
+m
+=src/main/java/org/example/controller/DashboardController.java,a\5\a523907361fc3ac1e2464754f8bf4b484015a64d
+q
+Asrc/main/java/org/example/service/citizen/CitizenServiceImpl.java,c\c\cce25b100cbee71e5b1280f01ef004460854221d
+m
+=src/main/java/org/example/service/citizen/CitizenService.java,6\6\66074a581e8f2acf83eca5b11844b9d1ce655625
+q
+Asrc/main/java/org/example/service/dashboard/DashboardService.java,f\4\f47eef2042d7e74c4e4507d8378ad4a7865b5769
+u
+Esrc/main/java/org/example/service/dashboard/DashboardServiceImpl.java,7\9\794dca0f98d8bb259fd144a6d7a6937f4ceb9574
+m
+=src/main/java/org/example/repository/DashboardRepository.java,f\9\f984407efafcf01b438dfd1529c6a66df60fa824
+k
+;src/main/java/org/example/service/report/ReportService.java,d\7\d739517564eac01e8e6a25ee9fa3d7241e93b096
+o
+?src/main/java/org/example/service/report/ReportServiceImpl.java,b\1\b1608ebdb4f79c36df202970af0d847194a7ddc7
+j
+:src/main/java/org/example/controller/ReportController.java,5\f\5f3f16bae9fd06999b8b8bff372fe9079516a1be

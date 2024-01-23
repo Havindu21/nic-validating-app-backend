@@ -1,4 +1,4 @@
-package org.example.service;
+package org.example.service.citizen;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;

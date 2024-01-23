@@ -2,7 +2,7 @@ package org.example.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.entity.CitizenEntity;
-import org.example.service.CitizenService;
+import org.example.service.citizen.CitizenService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

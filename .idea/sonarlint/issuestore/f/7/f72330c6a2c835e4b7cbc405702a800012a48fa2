@@ -1,2 +1,4 @@
 
-b	java:S112T"FDefine and throw a dedicated exception instead of using a generic one.(·Ö¢»8¥İˆ¿Ó1
+b	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(·Ö¢»8¥İˆ¿Ó1
+i
+java:S1192B"GDefine a constant instead of duplicating this literal "female" 3 times.(Ä¢¶şÿÿÿÿ8õ™ÀÓ1
