@@ -44,7 +44,7 @@ public class CitizenServiceImpl implements CitizenService {
 
     @Override
     public List<CitizenEntity> getValidatedNICsByFileName(String csvFileName) {
-        return citizenRepository.findByFileName(csvFileName+".csv");
+        return citizenRepository.findByFileName(csvFileName + ".csv");
     }
 
     @Override
@@ -75,13 +75,13 @@ public class CitizenServiceImpl implements CitizenService {
                             .fileName(file.getOriginalFilename())
                             .nic(csvLine.getNic())
                             .birthday(validateNIC(csvLine.getNic()))
-                            .age(age+"y")
+                            .age(age + "y")
                             .gender(gender)
                             .build()
                     )
                     .toList();
         } catch (IOException e) {
-            throw new RuntimeException("Error reading or processing CSV file: " + e.getMessage(), e);
+            throw new IllegalArgumentException("Error reading or processing CSV file: " + e.getMessage(), e);
         }
     }
 
@@ -105,7 +105,7 @@ public class CitizenServiceImpl implements CitizenService {
         int birthYear = Integer.parseInt(nic.substring(0, 2));
         int daysFromYearStart = Integer.parseInt(nic.substring(2, 5));
 
-        if(!Year.isLeap(birthYear)) daysFromYearStart-=1;
+        if (!Year.isLeap(birthYear)) daysFromYearStart -= 1;
 
         if (daysFromYearStart > 500) {
             daysFromYearStart -= 500;
@@ -115,15 +115,15 @@ public class CitizenServiceImpl implements CitizenService {
         }
 
         LocalDate birthDate = LocalDate.ofYearDay(1900 + birthYear, daysFromYearStart);
-        age = String.valueOf(LocalDate.now().getYear() - birthDate.getYear()-1);
+        age = String.valueOf(LocalDate.now().getYear() - birthDate.getYear() - 1);
         return birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
     private String validateNewNic(String nic) {
         int birthYear = Integer.parseInt(nic.substring(0, 4));
-        int daysFromYearStart = Integer.parseInt(nic.substring(4, 7))-1;
+        int daysFromYearStart = Integer.parseInt(nic.substring(4, 7)) - 1;
 
-        if(!Year.isLeap(birthYear)) daysFromYearStart-=1;
+        if (!Year.isLeap(birthYear)) daysFromYearStart -= 1;
 
         if (daysFromYearStart > 500) {
             daysFromYearStart -= 500;
@@ -133,7 +133,7 @@ public class CitizenServiceImpl implements CitizenService {
         }
 
         LocalDate birthDate = LocalDate.of(birthYear, 1, 1).plusDays(daysFromYearStart);
-        age = String.valueOf(LocalDate.now().getYear() - birthDate.getYear()-1);
+        age = String.valueOf(LocalDate.now().getYear() - birthDate.getYear() - 1);
         return birthDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 }

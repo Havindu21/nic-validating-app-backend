@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DashboardServiceImpl implements DashboardService{
+public class DashboardServiceImpl implements DashboardService {
 
     final CitizenRepository citizenRepository;
 
@@ -18,7 +18,6 @@ public class DashboardServiceImpl implements DashboardService{
 
     @Override
     public DashboardDetails getDashboardDetails() {
-        // Age Groups
         List<CitizenEntity> ageGroup16To30 = citizenRepository.findByAgeBetween("16", "30");
         List<CitizenEntity> ageGroup31To60 = citizenRepository.findByAgeBetween("31", "60");
         List<CitizenEntity> ageGroup60Plus = citizenRepository.findByAgeGreaterThanEqual("60");

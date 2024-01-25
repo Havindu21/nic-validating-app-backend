@@ -9,7 +9,10 @@ import java.util.List;
 @Repository
 public interface CitizenRepository extends CrudRepository<CitizenEntity, Long> {
     List<CitizenEntity> findByFileName(String csvFileName);
+
     long countByGender(String male);
+
     List<CitizenEntity> findByAgeBetween(String i, String i1);
+
     List<CitizenEntity> findByAgeGreaterThanEqual(String i);
 }

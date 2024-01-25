@@ -8,6 +8,8 @@ import java.util.Set;
 
 public interface CitizenService {
     Set<CitizenEntity> validateNICsAndSave(List<MultipartFile> files);
+
     List<CitizenEntity> getValidatedNICsByFileName(String fileName);
+
     List<CitizenEntity> getAllValidatedNICs();
 }
