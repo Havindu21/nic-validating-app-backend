@@ -13,6 +13,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api/citizen")
 @Slf4j
+@CrossOrigin
 public class CitizenController {
 
     final CitizenService citizenService;
